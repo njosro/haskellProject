@@ -5,13 +5,13 @@ import Data.Array;
 
 main = do
     let mylist = array (0,10) [(i,i) | i <- [4,7,9,12,16,17,22,56,59,77,93]]
-    print (bin_search 12 mylist 1 11)
+    print (bin_search 16 mylist 0 10)
     
-bin_search val L lo hi
-| hi<lo = -1
-| pivot>val = bin_search val L lo (mid-1)
-| pivot>val = bin_search val L (mid+1) hi
-| pivot==val = mid
-where
-mid = lo + (hi-lo) `div` 2
-pivot = L!mid
+bin_search val lst lo hi 
+    | hi<lo = -1 
+    | pivot>val = bin_search val lst lo (mid-1) 
+    | pivot>val = bin_search val lst (mid+1) hi 
+    | pivot==val = mid 
+    where 
+        mid = (lo + hi) `div` 2 
+        pivot = lst!mid
