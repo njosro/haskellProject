@@ -22,5 +22,5 @@ while wrong(i):
 
 print i
 
-#It takes 3.5 seconds to complete. If I went up by 1 each time it would
+#It takes 3.5 seconds to complete if you go up by 20. If I went up by 1 each time it would
 #take 20x as long, which is 1 min 10 sec.
