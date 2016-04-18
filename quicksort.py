@@ -1,3 +1,5 @@
+import timeit
+
 def quicksort(array):
     if len(array) <= 1:
         return array
@@ -14,3 +16,5 @@ def quicksort(array):
 
 lst = [int(i) for i in raw_input("List: ").split(" ")]
 print quicksort(lst)
+
+print timeit.timeit(lambda:quicksort(range(1000,0,-1)),number=50)/50

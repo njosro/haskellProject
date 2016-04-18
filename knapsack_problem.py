@@ -1,4 +1,4 @@
-def knapsackSolve(weights,values,maxCapacity=10,rounding=100):
+def knapsackSolve(weights,values,maxCapacity=10,rounding=4):
 	if len(weights)!=len(values):
 		return 'Error: list sizes unequal'
 	#create list with unit value of each item
